@@ -11,10 +11,10 @@ class UserController extends Controller
     }
 
     public function check(Request $request){
-        $user = $request->username;
+        $correo = $request->email;
         $pass  = $request->password;
  
-        if (auth()->attempt(array('name' => $user, 'password' => $pass))){
+        if (auth()->attempt(array('email' => $correo, 'password' => $pass))){
          return view('index');
         }
         else{  
