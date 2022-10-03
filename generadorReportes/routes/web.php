@@ -13,7 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/','UserController@index');
-Route::post('/check', 'UserController@check')->name('login.check');
+Route::get('/', 'UserController@index');
+Route::post('/index', 'UserController@check')->name('login.check');
 Route::post('/login', 'UserController@logout')->name('user.logout');
 Route::get('/login', 'UserController@index')->name('user.login');
+Route::get('/index', 'UserController@refresh');
