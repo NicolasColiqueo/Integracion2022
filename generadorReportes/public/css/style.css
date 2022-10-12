@@ -120,10 +120,10 @@ a,a:hover {
 }
 
 .table_box {
-    width: 800px;
+    width: 1200px;
     padding-top: 8px;
     padding-bottom: 15px;
-    margin: 300px auto 0px 100px;
+    margin: 100px auto 0px 20px;
     background-color: #21758a;
     border-radius: 15px;
     -moz-border-radius: 15px;
@@ -161,4 +161,11 @@ tbody tr:nth-child(odd) {
     color : #fff; 
     align-items: center;  
     height: 80px;
+}
+
+.search {
+    width: 100%;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }

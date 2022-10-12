@@ -7,10 +7,6 @@
 @section('content')
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <img src="{{ asset('images/uctlogo.png') }}" width="60" height="60" class="d-inline-block align-top" alt="">
-        <a class="navbar-brand" href="#">&nbsp&nbspUniversidad Católica de Temuco</a>
-    </nav>
     <div class="main">
         <p class="sign" align="center">Generador de Reportes</p>
         <div class="err" style="color: red" align="center">

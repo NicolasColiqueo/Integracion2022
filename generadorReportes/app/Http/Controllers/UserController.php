@@ -17,10 +17,10 @@ class UserController extends Controller
     {
         $correo = $request->email;
         $pass  = $request->password;
-        $data = DB::table('Alumno')->get();
+        $data = DB::table('Alumno')->paginate(10);
 
         if (auth()->attempt(array('email' => $correo, 'password' => $pass))) {
-            return view('index', ['alumnos' => $data]);
+            return view('alumno', ['alumnos' => $data]);
         } else {
             session()->flash('error', 'Credenciales Inválidas');
             return redirect()->route('user.login');
@@ -36,9 +36,9 @@ class UserController extends Controller
 
     public function refresh()
     {
-        $data = DB::table('Alumno')->get();
+        $data = DB::table('Alumno')->paginate(10);
         if (Auth::check()) {
-            return view('index', ['alumnos' => $data]);
+            return view('alumno', ['alumnos' => $data]);
         } else {
             return redirect()->route('user.login');
         }

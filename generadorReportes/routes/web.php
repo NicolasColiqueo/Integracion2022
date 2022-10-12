@@ -18,3 +18,7 @@ Route::post('/index', 'UserController@check')->name('login.check');
 Route::post('/login', 'UserController@logout')->name('user.logout');
 Route::get('/login', 'UserController@index')->name('user.login');
 Route::get('/index', 'UserController@refresh');
+Route::post('/tablaprofesores', 'TableController@mostrarprofesores')->name('tabla.profesores');
+Route::post('/tablaalumnos', 'TableController@mostraralumnos')->name('tabla.alumnos');
+Route::get('/searchalumno', 'TableController@searchalumno');
+Route::get('/searchprofesor', 'TableController@searchprofesor');
