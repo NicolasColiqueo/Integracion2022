@@ -10,14 +10,19 @@ class UserController extends Controller
 {
     public function index()
     {
-        return view('login');
+        $data = DB::table('Alumno')->get();
+        if (Auth::check()) {
+            return view('alumno', ['alumnos' => $data]);
+        } else {
+            return view('login');
+        }
     }
 
     public function check(Request $request)
     {
         $correo = $request->email;
         $pass  = $request->password;
-        $data = DB::table('Alumno')->paginate(10);
+        $data = DB::table('Alumno')->get();
 
         if (auth()->attempt(array('email' => $correo, 'password' => $pass))) {
             return view('alumno', ['alumnos' => $data]);
@@ -36,7 +41,7 @@ class UserController extends Controller
 
     public function refresh()
     {
-        $data = DB::table('Alumno')->paginate(10);
+        $data = DB::table('Alumno')->get();
         if (Auth::check()) {
             return view('alumno', ['alumnos' => $data]);
         } else {
