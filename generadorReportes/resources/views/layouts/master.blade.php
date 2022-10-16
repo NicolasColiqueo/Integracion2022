@@ -18,6 +18,7 @@
 
         <img src="{{ asset('images/uctlogo.png') }}" width="60" height="60" class="d-inline-block align-top" alt="">
         <a class="navbar-brand" href="#">&nbsp&nbspUniversidad Católica de Temuco</a>
+        @if(Auth::check())
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -33,7 +34,6 @@
                     <a class="nav-link" href="{{route('nav.contacto')}}">Contacto</a>
                 </li>
             </ul>
-            @if(Auth::check())
             <ul class="navbar-nav ml-auto">
                 <form class="nav_right" action="{{ route('user.logout') }}" method="post">
                     @csrf
@@ -42,13 +42,14 @@
                     <button class="btn btn-danger" type="submit"><a>Logout</a></button>
                 </form>
             </ul>
-            @endif
         </div>
         <span class="navbar-text">
         </span>
+        @endif
     </nav>
     @yield('content')
 </body>
 
 <footer> © 2021-2030 private copyright security </footer>
+
 </html>

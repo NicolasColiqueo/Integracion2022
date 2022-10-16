@@ -14,9 +14,4 @@ class TableController extends Controller
         return view('profesor', ['profesores' => $data]);
     }
 
-    public function mostraralumnos()
-    {
-        $data = DB::table('Alumno')->get();
-        return view('alumno', ['alumnos' => $data]);
-    }
 }

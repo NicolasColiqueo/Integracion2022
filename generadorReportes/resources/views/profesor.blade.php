@@ -23,7 +23,7 @@
         <button class="btn btn-primary rounded" type="submit" id="cambio_tabla" name="cambio_tabla">Cambiar</button>
     </div>
     <div class="table_box">
-        <table id="tabla" class="table">
+        <table id="tabla" class="table table-striped table-responsive" style="width:100%">
             <thead>
                 <tr>
                     <th scope="col">RUT</th>

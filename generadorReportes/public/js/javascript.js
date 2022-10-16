@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     $cambio_tabla.on("click", function () {
         if ($tab == "Alumno") {
-            window.location = "tablaalumnos";
+            window.location = "index";
         } else if ($tab == "Profesor") {
             window.location = "tablaprofesores";
         }
@@ -19,6 +19,9 @@ $(document).ready(function () {
         .appendTo('#tabla thead');
 
     $('#tabla').DataTable({
+        "columnDefs": [
+            { "width": "1%", "targets": '_all' }
+        ],
         "language": {
             "url": "//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json"
         },
@@ -28,6 +31,7 @@ $(document).ready(function () {
         ],
         orderCellsTop: true,
         fixedHeader: true,
+        responsive: true,
         initComplete: function () {
             var api = this.api();
 

@@ -10,10 +10,18 @@ class NavbarController extends Controller
 {
     public function cambiarUCT()
     {
-        return view('uct');
+        if (Auth::check()) {
+            return view('uct');
+        } else {
+            return redirect()->route('user.login');
+        }
     }
     public function cambiarContacto()
     {
-        return view('contacto');
+        if (Auth::check()) {
+            return view('contacto');
+        } else {
+            return redirect()->route('user.login');
+        }
     }
 }
