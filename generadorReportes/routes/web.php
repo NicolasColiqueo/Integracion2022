@@ -20,3 +20,5 @@ Route::get('/login', 'UserController@index')->name('user.login');
 Route::get('/index', 'UserController@refresh');
 Route::get('/tablaprofesores', 'TableController@mostrarprofesores');
 Route::get('/tablaalumnos', 'TableController@mostraralumnos');
+Route::get('/uct', 'NavbarController@cambiarUCT')->name('nav.uct');
+Route::get('/contacto', 'NavbarController@cambiarContacto')->name('nav.contacto');

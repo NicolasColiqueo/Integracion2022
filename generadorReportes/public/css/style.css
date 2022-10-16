@@ -1,10 +1,10 @@
 body {
-    background-color: #1079D1;
+    background-color: #ffffff;
     font-family: 'Ubuntu', sans-serif;
 }
 
 .main {
-    background-color: #ffffff;
+    background-color: #0051ffa8;
     width: 400px;
     height: 400px;
     margin: 7em auto;
@@ -88,7 +88,7 @@ font-family: 'Ubuntu', sans-serif;
 
 .forgot {
     text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
-    color: #87CEEB;
+    color: #eb8787;
     padding-top: 15px;
 }
 
@@ -148,4 +148,82 @@ thead {
     color : #fff; 
     align-items: center;  
     height: 80px;
+}
+.navbar{
+    background-color: #0087f5;
+    margin-block-end: 50px;
+}
+.btncont{
+    background-color: #0087f5;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 350px;
+    margin-top: -40px;
+    position: absolute;
+}
+
+
+.contenedor { column-count: 2; }
+
+.asdCF {
+    text-align: center;
+    color: rgb(0, 48, 121);
+    background-color: #0087f571;
+    padding: 5%;
+    margin-left: 5%;
+    margin-right: 2%;
+}
+
+.asideCN{
+    text-align: center;
+    color: rgb(0, 48, 121);
+    background-color: #0087f571;
+    padding: 5%;
+    margin-right: 5%;
+    margin-left: 2%;
+}
+.map { 
+    column-count: 2;
+    margin-top: 3%;
+ }
+
+.mapscn{
+    text-align: center;
+    margin-right: 5%;
+    margin-left: 2%;
+}
+.mapssf{
+    text-align: center;
+    margin-right: 2%;
+    margin-left: 5%;
+}
+.coment{
+    margin-top: 5%;
+    font-size: 80%;
+}
+.ttl{
+    margin-top: 5%;
+}
+
+.aside li{
+    text-align: center;
+    color: rgba(236, 176, 46, 0.788);
+    text-decoration: none;
+    list-style: none;
+}
+.correo{
+    text-align: center;
+    color: rgb(0, 48, 121);
+    background-color: #0087f571;
+    padding: 2%;
+    margin: 2%;
+    align-content: center;
+}
+
+footer{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.856);
+    background-color: #0087f5;
+    padding: 2%;
+    align-content: center;
 }
