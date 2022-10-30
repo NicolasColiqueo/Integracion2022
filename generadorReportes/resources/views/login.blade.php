@@ -19,7 +19,6 @@
             <input class="un " type="text" align="center" placeholder="Correo" id="email" name="email">
             <input class="pass" type="password" align="center" placeholder="Contraseña" id="password" name="password">
             <button class="submit" align="center" type="submit">Iniciar sesión</button>
-            <p class="forgot" align="center"><a href="#">Recuperar contraseña</p>
         </form>
     </div>
 </body>

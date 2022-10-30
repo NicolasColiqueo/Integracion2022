@@ -2,18 +2,18 @@
 <html>
 
 <head>
-    <title>Tabla Alumnos</title>
+    <title>Tabla Gastos</title>
 </head>
 @section('content')
 
 <body class="index_main">
     <div class=col-md-3>
         <select class="form-control" name="tablas" id="tablas">
-            <option value="Alumno" selected>Alumno</option>
+            <option value="Alumno">Alumno</option>
             <option value="Profesor">Profesor</option>
             <option value="Carrera">Carrera</option>
             <option value="Departamento">Departamento</option>
-            <option value="Gasto">Gasto</option>
+            <option value="Gasto" selected>Gasto</option>
             <option value="Ramo">Ramo</option>
             <option value="TipoCarrera">Tipo Carrera</option>
         </select>
@@ -25,22 +25,20 @@
         <table id="tabla" class="table table-striped table-responsive" style="width:100%">
             <thead>
                 <tr>
-                    <th scope="col">RUT</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Apellido</th>
-                    <th scope="col">Correo</th>
-                    <th scope="col">Año de ingreso</th>
+                    <th scope="col">Id del gasto</th>
+                    <th scope="col">Monto</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Id del departamento</th>
                     <th scope="col">Id de carrera</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach($alumnos as $item)
+                @foreach($gastos as $item)
                 <tr>
-                    <th scope="row">{{$item->Rut_Alumno}}</th>
-                    <td>{{$item->Nombres}}</td>
-                    <td>{{$item->Apellidos}}</td>
-                    <td>{{$item->Correo}}</td>
-                    <td>{{$item->Anho_Ingreso}}</td>
+                    <th scope="row">{{$item->Id_Gasto}}</th>
+                    <td>{{$item->Monto}}</td>
+                    <td>{{$item->Fecha}}</td>
+                    <td>{{$item->Id_Departamento}}</td>
                     <td>{{$item->Id_Carrera}}</td>
                 </tr>
                 @endforeach

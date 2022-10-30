@@ -11,6 +11,21 @@ $(document).ready(function () {
         } else if ($tab == "Profesor") {
             window.location = "tablaprofesores";
         }
+            else if ($tab == "Carrera") {
+            window.location = "tablacarrera";
+        }
+            else if ($tab == "Departamento") {
+            window.location = "tabladepartamento";
+        }
+            else if ($tab == "Gasto") {
+            window.location = "tablagasto";
+        }
+            else if ($tab == "Ramo") {
+            window.location = "tablaramo";
+        }
+            else if ($tab == "TipoCarrera") {
+            window.location = "tablatipocarrera";
+        }
     });
 
     $('#tabla thead tr')
@@ -25,9 +40,20 @@ $(document).ready(function () {
         "language": {
             "url": "//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json"
         },
-        dom: 'lBfrtip',
+        dom: 'QlBfrtip',
         buttons: [
-            { extend: 'spacer' }, 'copy', 'csv', 'excel', 'pdf'
+            { extend: 'spacer' }, 'copy', 'csv', 'excel', 'pdf',
+            {
+                text: 'JSON',
+                action: function ( e, dt, button, config ) {
+                    var data = dt.buttons.exportData();
+ 
+                    $.fn.dataTable.fileSave(
+                        new Blob( [ JSON.stringify( data ) ] ),
+                        'Tabla.json'
+                    );
+                }
+            }
         ],
         orderCellsTop: true,
         fixedHeader: true,

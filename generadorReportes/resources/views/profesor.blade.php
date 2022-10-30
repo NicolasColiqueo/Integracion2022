@@ -3,10 +3,6 @@
 
 <head>
     <title>Tabla Profesores</title>
-    <link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/fixedheader/3.2.3/css/fixedHeader.dataTables.min.css" rel="stylesheet">
 </head>
 @section('content')
 
@@ -15,8 +11,11 @@
         <select class="form-control" name="tablas" id="tablas">
             <option value="Alumno">Alumno</option>
             <option value="Profesor" selected>Profesor</option>
-            <option value="a2">a2</option>
-            <option value="a3">a3</option>
+            <option value="Carrera">Carrera</option>
+            <option value="Departamento">Departamento</option>
+            <option value="Gasto">Gasto</option>
+            <option value="Ramo">Ramo</option>
+            <option value="TipoCarrera">Tipo Carrera</option>
         </select>
     </div>
     <div class=col-md-3>
@@ -55,15 +54,6 @@
         </table>
     </div>
 </body>
-<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-<script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
-<script src="https://cdn.datatables.net/fixedheader/3.2.3/js/dataTables.fixedHeader.min.js"></script>
 
 @endsection
 

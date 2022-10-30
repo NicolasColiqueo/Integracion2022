@@ -2,16 +2,16 @@
 <html>
 
 <head>
-    <title>Tabla Alumnos</title>
+    <title>Tabla Carreras</title>
 </head>
 @section('content')
 
 <body class="index_main">
     <div class=col-md-3>
         <select class="form-control" name="tablas" id="tablas">
-            <option value="Alumno" selected>Alumno</option>
+            <option value="Alumno">Alumno</option>
             <option value="Profesor">Profesor</option>
-            <option value="Carrera">Carrera</option>
+            <option value="Carrera" selected>Carrera</option>
             <option value="Departamento">Departamento</option>
             <option value="Gasto">Gasto</option>
             <option value="Ramo">Ramo</option>
@@ -25,23 +25,19 @@
         <table id="tabla" class="table table-striped table-responsive" style="width:100%">
             <thead>
                 <tr>
-                    <th scope="col">RUT</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Apellido</th>
-                    <th scope="col">Correo</th>
-                    <th scope="col">Año de ingreso</th>
                     <th scope="col">Id de carrera</th>
+                    <th scope="col">Nombre de la carrera</th>
+                    <th scope="col">Id del departamento</th>
+                    <th scope="col">Id del tipo de carrera</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach($alumnos as $item)
+                @foreach($carreras as $item)
                 <tr>
-                    <th scope="row">{{$item->Rut_Alumno}}</th>
-                    <td>{{$item->Nombres}}</td>
-                    <td>{{$item->Apellidos}}</td>
-                    <td>{{$item->Correo}}</td>
-                    <td>{{$item->Anho_Ingreso}}</td>
-                    <td>{{$item->Id_Carrera}}</td>
+                    <th scope="row">{{$item->Id_Carrera}}</th>
+                    <td>{{$item->Nombre_Carrera}}</td>
+                    <td>{{$item->Id_Departamento}}</td>
+                    <td>{{$item->Id_Tipo_Carrera}}</td>
                 </tr>
                 @endforeach
             </tbody>
