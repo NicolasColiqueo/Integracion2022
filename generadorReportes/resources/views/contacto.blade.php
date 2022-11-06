@@ -3,31 +3,46 @@
 
 <head>
     <title>CONTACTO</title>
-    <link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/fixedheader/3.2.3/css/fixedHeader.dataTables.min.css" rel="stylesheet">
 </head>
 @section('content')
 
 <body class="index_main">
     
-   
+    
     <div class="correo">
-        <h4>CORREO DEPARTAMENTO DE INFORMATICA</h4>
-        <p>JEFE: leandrojefe@uct.cl</p>
-        <p>SECRETARIA: mariasecretaria@uct.cl</p>
-        <h4>CORREO DEPARTAMENTO DE MATEMATICA</h4>
-        <p>JEFE: josejefe@uct.cl</p>
-        <p>SECRETARIA: alejandrocretaria@uct.cl</p>
-        <h4>CORREO DEPARTAMENTO DE CIENCIAS</h4>
-        <p>JEFE: leandrojefe@uct.cl</p>
-        <p>SECRETARIA: mariasecretaria@uct.cl</p>
-        <h4>CORREO DEPARTAMENTO JURIDICO</h4>
-        <p>JEFE: josejefe@uct.cl</p>
-        <p>SECRETARIA: alejandrocretaria@uct.cl</p>
-    </div>
+        <h4>BIENESTAR ESTUDIANTIL</h4>
+        <p>Director(a): cpichara@uct.cl</p>
+        <p>SECRETARIA: apoblete@uct.cl</p>
+
+        <h4>ING. CIVIL INFORMATICA</h4>
+        <p>JEFE: mlevano@uct.cl</p>
+        
+        <h4>DERECHO</h4>
+        <p>JEFE: mbaeza@uct.cl</p>
+      
+        <h4>DISEÑO</h4>
+        <p>JEFE: blopez@uct.cl</p>
+
+        <h4>MEDICINA VETERINARIA</h4>
+        <p>JEFE: dircavet@uct.cl</p>
+
+        <h4>PED. EDUCACION FISICA</h4>
+        <p>JEFE: palamos@uct.cl</p>
+
+        <h4>PED. EN HISTORIA Y GEOGRAFIA</h4>
+        <p>JEFE: ocarrillo@uct.cl</p>
+
+        <h4>PED. EN INGLES</h4>
+        <p>JEFE: ttagle@uct.cl</p>
+        </div>
+    <br><br><br>
 </body>
 
+
 @endsection
+
 </html>
+
+
+
+

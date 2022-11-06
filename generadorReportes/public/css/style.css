@@ -1,22 +1,27 @@
+
 body {
-    background-color: #ffffff;
     font-family: 'Ubuntu', sans-serif;
     position: relative;
-    min-height: 100vh;
+    min-height: 100vh; 
+    background-image: url("../images/sf.jpg");
+    backdrop-filter: blur(4px);
 }
-
+#tabla_paginate{
+    margin-block-end: 5%;
+}
 .main {
-    background-color: #0051ffa8;
+    background-color: #0051ff70;
     width: 400px;
     height: 400px;
     margin: 7em auto;
     border-radius: 1.5em;
     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+   
 }
 
 .sign {
     padding-top: 40px;
-    color: #000080;
+    color: #ffffff;
     font-family: 'Ubuntu', sans-serif;
     font-weight: bold;
     font-size: 23px;
@@ -126,16 +131,20 @@ a,a:hover {
     padding-top: 8px;
     padding-bottom: 15px;
     margin: 10px auto 0px 20px;
+
+    
 }
+.tr{background-color : rgba(255, 255, 255, 0.685); }
 
 table {
     border: solid 15px #21758a;
     border-radius: 15px;
     color: #21758a;
+    background-color : rgba(255, 255, 255, 0.685); 
 }
 thead { 
     background-color: #21758a;
-    color : #fff; 
+    color :rgba(255, 255, 255, 0.685);  
     font: bold 14px verdana;
     padding: 4px; 
     line-height:30px;
@@ -143,6 +152,15 @@ thead {
 
 .index_main {
     background-color: #FFFFFF;
+}
+
+.camm{
+    background-color: #0087f5;
+    padding: 6px;
+}
+.fc{
+    padding: 8px;
+    border-radius: 8%;
 }
 
 .nav_right {
@@ -169,8 +187,8 @@ thead {
 
 .asdCF {
     text-align: center;
-    color: rgb(0, 48, 121);
-    background-color: #0087f571;
+    color: white;
+    background-color: #0087f583;
     padding: 5%;
     margin-left: 5%;
     margin-right: 2%;
@@ -178,8 +196,8 @@ thead {
 
 .asideCN{
     text-align: center;
-    color: rgb(0, 48, 121);
-    background-color: #0087f571;
+    color: white;
+    background-color: #0087f583;
     padding: 5%;
     margin-right: 5%;
     margin-left: 2%;
@@ -193,11 +211,13 @@ thead {
     text-align: center;
     margin-right: 5%;
     margin-left: 2%;
+    color: white;
 }
 .mapssf{
     text-align: center;
     margin-right: 2%;
     margin-left: 5%;
+    color: white;
 }
 .coment{
     margin-top: 5%;
@@ -213,14 +233,18 @@ thead {
     text-decoration: none;
     list-style: none;
 }
+
 .correo{
+    column-count: 2;
+    margin-top: 3%;
     text-align: center;
-    color: rgb(0, 48, 121);
-    background-color: #0087f571;
-    padding: 2%;
-    margin: 2%;
-    align-content: center;
+    color: white;
+    background-color: #0087f583;
+    padding: 5%;
+    margin: 5%;
+
 }
+
 
 footer{
     text-align: center;
