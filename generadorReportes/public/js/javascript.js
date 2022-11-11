@@ -5,29 +5,6 @@ $(document).ready(function () {
         $tab = $("#tablas").val();
     })
 
-    $cambio_tabla.on("click", function () {
-        if ($tab == "Alumno") {
-            window.location = "index";
-        } else if ($tab == "Profesor") {
-            window.location = "tablaprofesores";
-        }
-            else if ($tab == "Carrera") {
-            window.location = "tablacarrera";
-        }
-            else if ($tab == "Departamento") {
-            window.location = "tabladepartamento";
-        }
-            else if ($tab == "Gasto") {
-            window.location = "tablagasto";
-        }
-            else if ($tab == "Ramo") {
-            window.location = "tablaramo";
-        }
-            else if ($tab == "TipoCarrera") {
-            window.location = "tablatipocarrera";
-        }
-    });
-
     $('#tabla thead tr')
         .clone(true)
         .addClass('filters')
@@ -40,20 +17,103 @@ $(document).ready(function () {
         "language": {
             "url": "//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json"
         },
-        dom: 'QlBfrtip',
+        dom: 'lBfrtip',
+        searchBuilder: {
+            
+        },
         buttons: [
-            { extend: 'spacer' }, 'copy', 'csv', 'excel', 'pdf',
+            { extend: 'spacer' },
+            {
+                extend: 'searchBuilder',
+                config: {
+                    depthLimit: 2
+                }
+            },
+            { extend: 'spacer' },
+            {
+                extend: 'copyHtml5',
+                exportOptions: {
+                    columns: [ 0, ':visible' ]
+                }
+            },
+            {
+                extend: 'csvHtml5',
+                exportOptions: {
+                    columns: ':visible'
+                }
+            },
+            {
+                extend: 'excelHtml5',
+                exportOptions: {
+                    columns: ':visible'
+                }
+            },
+            {
+                extend: 'pdfHtml5',
+                exportOptions: {
+                    columns: ':visible'
+                }
+            },
             {
                 text: 'JSON',
                 action: function ( e, dt, button, config ) {
                     var data = dt.buttons.exportData();
- 
+                    
                     $.fn.dataTable.fileSave(
                         new Blob( [ JSON.stringify( data ) ] ),
                         'Tabla.json'
                     );
                 }
-            }
+            },
+            'colvis',
+            {
+                extend: 'collection',
+                text: 'Cambio de tabla',
+                buttons: [
+                    {
+                        text: 'Alumno',
+                        action: function ( e, dt, node, config ) {
+                            window.location = "index";
+                        }
+                    },
+                    {
+                        text: 'Profesor',
+                        action: function ( e, dt, node, config ) {
+                            window.location = "tablaprofesores";
+                        }
+                    },
+                    {
+                        text: 'Carrera',
+                        action: function ( e, dt, node, config ) {
+                            window.location = "tablacarrera";
+                        }
+                    },
+                    {
+                        text: 'Departamento',
+                        action: function ( e, dt, node, config ) {
+                            window.location = "tabladepartamento";
+                        }
+                    },
+                    {
+                        text: 'Gasto',
+                        action: function ( e, dt, node, config ) {
+                            window.location = "tablagasto";
+                        }
+                    },
+                    {
+                        text: 'Ramo',
+                        action: function ( e, dt, node, config ) {
+                            window.location = "tablaramo";
+                        }
+                    },
+                    {
+                        text: 'Tipo Carrera',
+                        action: function ( e, dt, node, config ) {
+                            window.location = "tablatipocarrera";
+                        }
+                    }
+                ]
+            },
         ],
         orderCellsTop: true,
         fixedHeader: true,
