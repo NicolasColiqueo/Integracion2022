@@ -1,9 +1,9 @@
-1. Descripción  general del proyecto
-Perspectiva del producto.
+# Descripción  general del proyecto
+## Perspectiva del producto.
 La problemática principal es de tener un lugar que permita al usuario seleccionar las tablas, campos, crear condiciones y ordenar los
 resultados según lo que se estime conveniente, adicionalmente, guardar las consultas para volver a ejecutarlas posteriormente.
 
-Funcionalidad del producto.
+## Funcionalidad del producto.
 Construir un módulo que permita administrar y configurar una base de datos (independiente de su MER) para generar de forma dinámica 
 reportes SQL mediante asistentes guiados que faciliten al usuario final la construcción de sus consultas particulares que puedan ser exportados a 
 formatos estándar de salida como Excel, PDF o JSON (para APIs). El sistema internamente conocerá cuáles son las tablas, y columnas que estarán 
@@ -43,9 +43,9 @@ ello que por lo general para obtener información siempre requieren cálculos de
    aprobación y reprobación de los ramos.
 
 
-3. Requisitos de herramientas para el desarrollo
+## Requisitos de herramientas para el desarrollo
 
-3.1 Laravel (Breve descripción) 
+### Laravel (Breve descripción) 
 Laravel es un framework de PHP para ayudarnos en un tipo de desarrollo sobre aplicaciones escritas en este lenguaje de programación. 
 Esté framework o más bien podría llamarlo compañero de ahora en adelante, nos ayuda en muchas cosas al desarrollar una aplicación,
  por medio de su sistema de paquetes y de ser un framework del tipo MVC (Modelo-Vista-Controlador) da como resultado que podamos “despreocuparnos”
@@ -54,43 +54,42 @@ de escribirlo y repetirlos muchas veces con lo que eso conlleva a la hora de mod
 Funciona como muchos otros ya, desde la línea de comandos con el famoso Artisan que es el nombre que le dan a esta interfaz por comandos para 
 ejecutar muchas funcionalidades como ver todas las rutas de la aplicación disponible, o poner a correr la aplicación o pararla. 
 
-
-3.2 SQL Server mánager (Breve descripcion) 
+### SQL Server mánager (Breve descripcion) 
 SQL Server Management Studio (SSMS para abreviar) es un entorno de desarrollo integrado para administrar cualquier infraestructura SQL.
  Se utiliza para acceder, administrar, configurar y desarrollar todos los componentes de SQL Server y SQL Database. Microsoft lo ha optimizado
 a lo largo de los años y es un programa de administración de servidores y bases de datos muy popular.
 
-3.3 SQL2019 SSEI(Breve descripción) 
+### SQL2019 SSEI(Breve descripción) 
 Microsoft SQL Server es uno de los principales sistemas de gestión de bases de datos relacional del mercado que presta servicio a un amplio
  abanico de aplicaciones de software destinadas a la inteligencia empresarial y análisis sobre entornos corporativos.
 
 Basada en el lenguaje Transact-SQL, incorpora un conjunto de extensiones de programación propias de lenguaje estándar y su aplicación está
  disponible para usarse tanto a nivel on premise o bajo una modalidad cloud.
 
-3.4 Composer(Breve descripcion) 
+### Composer(Breve descripcion) 
 Composer es un manejador de paquetes para PHP que proporciona un estándar para administrar, descargar e instalar dependencias y librerías.
 Similar a NPM en Node.js y Bundler en Ruby, Composer es la solución ideal cuando trabajamos en proyectos complejos que dependen de múltiples
 fuentes de instalación. En lugar de tener que descargar cada dependencia de forma manual, Composer hace esto de forma automática por nosotros.
 
-3.5 Php 7(Breve descripcion)
+### Php 7(Breve descripcion)
 PHP es un lenguaje de programación muy popular utilizado especialmente para la creación de páginas web dinámicas. Es de código abierto y 
 distribuido bajo la licencia PHP, lo que hace posible reutilizar o modificar el código fuente sin costes adicionales. La función básica de
  PHP es leer datos de formularios y convertirlos en variables PHP. Posteriormente, las variables pueden, por ejemplo, ser introducidas en una 
  base de datos o enviadas por correo electrónico. Las ventajas de PHP incluyen su integración con el protocolo de Internet y un amplio 
  soporte de diferentes modelos de bases de datos.
 
-3.6 Xampp(Breve descripcion) 
+### Xampp(Breve descripcion) 
  Xampp es un servidor web local multiplataforma que permite la creación y prueba de páginas web u otros elementos de programación. 
  Sin embargo, Xampp integra una serie de herramientas que potencian y facilitan la experiencia al desarrollador.
 Es decir, Xampp en sí mismo no es un programa, sino un paquete de programas o software que contiene herramientas de gestión de base de datos.
 Fue desarrollado por Apache Friends y su nombre es un acrónimo de cada una de las principales herramientas que contiene; 
 esto nos sirve para hacernos una idea de cuáles son los principales programas que vienen en el paquete.
 
-3.7 Uso de cualquier software para escritura de Código como por ejemplo Visual Studio Code, Sublimetext, Atom, etc.
+Uso de cualquier software para escritura de Código como por ejemplo Visual Studio Code, Sublimetext, Atom, etc.
 
+## Guía de instalación y configuración de las herramientas.
 
-4. Guía de instalación y configuración de las herramientas.
-4.1: Xampp
+### Xampp
 1.Descargar el programa XAMPP de su sitio web oficial
 2.Una vez descargado el paquete, ejecutamos el archivo .exe haciendo doble clic en él.
 3.Una vez realizados los pasos, aparece una pantalla de inicio del asistente para instalar XAMPP. Para ajustar las configuraciones de la instalación se hace clic en Next.
@@ -106,9 +105,7 @@ Luego de completar la instalación debemos configurar unas extensiones de php de
 3. Una vez dentro de php.ini debemos buscar las extensiones en las  Notes for Windows environments y agregar las siguientes extensiones.
    extension=php_pdo_sqlsrv_74_ts_x64.dll      extension=php_sqlsrv_74_ts_x64.dll    guardamos, cerramos y reiniciamos el dispositivo.
 
-
-
-4.2 Composer: 
+### Composer: 
 1.Instala PHP en tu computadora. Recomendamos usar XAMPP con este propósito, ya que el proceso es sencillo y puedes completarlo en unos minutos.
 2.Una vez que XAMPP esté instalado, descarga la última versión de Composer.
 3.Ejecuta el asistente de instalación de Composer. Cuando te solicite que actives el modo desarrollador, ignóralo y continúa con el proceso de instalación.
@@ -117,7 +114,7 @@ Luego de completar la instalación debemos configurar unas extensiones de php de
 6.Después de completar la instalación, abre el símbolo del sistema. Presiona CTRL + R, escribe «cmd» y haz clic en OK.
 7.Ingresa el siguiente comando: composer para verificar que la instalación fue correcta.
 
-4.3 Laravel: 
+### Laravel: 
 Una vez instalado composer debemos realizar los siguientes pasos para la instalación de Laravel:
 1.Descargue el instalador de Laravel usando Composer con el siguiente comando en consola composer global requiere laravel/installer. 
 2.Asegúrese de colocar el directorio bin de proveedores de todo el sistema de Composer en $PATHsu sistema para que su sistema pueda ubicar el ejecutable de laravel. 
@@ -127,12 +124,12 @@ Otra forma de instalar Laravel es creando un proyecto con composer:
 2.Si tiene PHP instalado localmente y le gustaría usar el servidor de desarrollo incorporado de PHP para servir su aplicación, puede usar
  el servecomando Artisan php artisan serve. Este comando iniciará un servidor de desarrollo en http://localhost:8000:
 
-4.4 SQL Server Management Studio SSMS
+### SQL Server Management Studio SSMS
 1. Para descargar SSMS 19 Preview 3, visite Descargar SSMS 19 y descargamos el ejecutable Download SQL Server Management Studio (SSMS) 19 (Preview).
 2.Ejecutamos el instalador y escogemos una ruta de instalación.
 3. Esperamos a que finalice las descarga y cerremos el instalador.
 
-4.5La configuración del SQL Server Management Studio SSMS
+### La configuración del SQL Server Management Studio SSMS
 
 1.Para crear un nuevo usuario con derechos de administrador del sistema, realice los siguientes pasos:
 2.En el Explorador de objetos de SQL Server Management Studio, vaya a la carpeta Seguridad y expándala.
@@ -151,6 +148,6 @@ Una vez echo el login de administrador debemos ejecutar SQL Server Configuration
 1.Al ejecutarlo nos aparece una venta con diferentes opciones, pero nosotros escogemos SQL server Network Configuración, una vez seleccionada nos aparece una items llamado Protocolos for SQLEXPRESS le damos doble click y nos mostrara tres opciones y debemos abrir TCP/IP, al abrirlo nos dirigimos a IP Addresses, ubicamos IPAII editamos el TCP Dynamic Ports con la IP 1433 
 
 
-5.Derechos de autor
+## Derechos de autor
 
 Departamento de Ingeniería en Informática
