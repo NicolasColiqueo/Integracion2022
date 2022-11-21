@@ -13,29 +13,29 @@ SQL o la estructura de datos final.
 
 Los objetivos que se van a realizar en este proyecto son los siguientes:
 
-1.1.	Reportes de sueldo por departamento, debido a que existen las finanzas en las cuales son presentadas en una junta, reunión o informe para
+1.1 Reportes de sueldo por departamento, debido a que existen las finanzas en las cuales son presentadas en una junta, reunión o informe para
  estas ser presentadas y descritas, muchas veces añaden información extensa de esta, por lo cual muchas veces se pasa por alto información precisa,
  la cual a la hora de necesitarla se tiene que releer el informe con los datos, perdiendo un tiempo necesario para el desarrollo de una actividad,
  por lo cual, presentado este problema, se concluyó en la solución de poder visualizar los sueldos necesarios por departamento de una manera
  sencilla y directa ofreciendo los datos precisos. 
 
-1.2.	Reporte horas trabajadas por profesor, debido a que muchos profesores imparten más de un solo ramo se precisan la información sobre 
+1.2 Reporte horas trabajadas por profesor, debido a que muchos profesores imparten más de un solo ramo se precisan la información sobre 
 horas que este haya trabajado, si bien están las horas dictadas por clase o por día, estas tienen que ser calculadas para tener un panorama 
 general de estos datos, y es por ello que se concluyó la solución de poder visualizar las horas trabajadas por cada profesor de una manera
 sencilla y directa ofreciendo los datos precisos. 
-1.3.	Reporte de gastos por carrera, Es unos de los problemas que identificamos debido a que es algo que requiere de mucho tiempo para su
+1.3 Reporte de gastos por carrera, Es unos de los problemas que identificamos debido a que es algo que requiere de mucho tiempo para su
  elaboración, esto debido a que cada facultad tiene diferentes gastos en distintas fechas, distintos motivos y en diferentes cantidades,
   entonces unas de las soluciones que daremos es crear bases de datos las cuales nos devolverán información según los diferentes filtros 
   que se crearán previamente, haciendo más sencillo la recopilación de los datos además de ser más eficientes y precisos para el usuario. 
 
-1.4.	Reportes semestral y anual, si bien los reportes de información sobre cada gestión de una organización se presentan semestral o 
+1.4 Reportes semestral y anual, si bien los reportes de información sobre cada gestión de una organización se presentan semestral o 
 trimestralmente, estos son extensos y variados por cada área de este, por lo cual esta información es bastante abundante y extensa, es por 
 ello que por lo general para obtener información siempre requieren cálculos de horas al mes o cálculo de sumas monetarias, entre otros, sumado
  a la búsqueda de los datos en los reportes presentados, lo cual dificulta el trabajo a desarrollar, es por ello por lo que se concluye en la solución
   de generar reportes semestrales y anuales, así agilizando el visualizar estos datos de manera eficiente, con cálculos ya programados, 
   el cual proporciona los datos específicos, en un menor costo de tiempo.
 
-1.5.	Reportes de aprobación y reprobación de un ramo, debido a que cada carrera tiene diferentes ramos en los cuales dentro de estos
+1.5 Reportes de aprobación y reprobación de un ramo, debido a que cada carrera tiene diferentes ramos en los cuales dentro de estos
  existen diferentes alumnos que rinden distintos ramos y además estos tiene la posibilidad de aprobar o reprobar los ramos, encontramos una
   problemática la cual consiste en que se generar una gran cantidad de datos los cuales son difíciles de organizar para poder dar un reporte de
    forma completa y eficiente por cada carrera y ramo. Una de las soluciones a las que queremos llegar es generar reportes de manera eficiente 
@@ -91,12 +91,19 @@ Uso de cualquier software para escritura de Código como por ejemplo Visual Stud
 
 ### Xampp
 1.Descargar el programa XAMPP de su sitio web oficial
+
 2.Una vez descargado el paquete, ejecutamos el archivo .exe haciendo doble clic en él.
+
 3.Una vez realizados los pasos, aparece una pantalla de inicio del asistente para instalar XAMPP. Para ajustar las configuraciones de la instalación se hace clic en Next.
+
 4.En la rúbrica “Select components” se pueden excluir de la instalación componentes aislados del paquete de software de XAMPP. Se recomienda la configuración estándar para un servidor de prueba local, con la cual se instalan todos los componentes disponibles. Confirma la selección haciendo clic en Next.
+
 5.En este paso se escoge el directorio donde se instalará el paquete. Si se ha escogido la configuración estándar se creará una carpeta con el nombre XAMPP en C:.
+
 6.El asistente extrae los componentes seleccionados y los guarda en el directorio escogido en un proceso que puede durar algunos minutos
+
 7.Durante el proceso de instalación es frecuente que el asistente avise del bloqueo de Firewall. En la ventana puedes marcar las casillas correspondientes para permitir la comunicación del servidor, Apache en una red privada o en una red de trabajo.
+
 8.Una vez extraídos e instalados todos los componentes puedes cerrar el asistente de instalación.
 
 Luego de completar la instalación debemos configurar unas extensiones de php dentro de Xampp para esto se debe realizar los siguientes pasos.
@@ -107,40 +114,63 @@ Luego de completar la instalación debemos configurar unas extensiones de php de
 
 ### Composer: 
 1.Instala PHP en tu computadora. Recomendamos usar XAMPP con este propósito, ya que el proceso es sencillo y puedes completarlo en unos minutos.
+
 2.Una vez que XAMPP esté instalado, descarga la última versión de Composer.
+
 3.Ejecuta el asistente de instalación de Composer. Cuando te solicite que actives el modo desarrollador, ignóralo y continúa con el proceso de instalación.
+
 4.Aparecerá otra ventana y te pedirá que ubiques la línea de comando PHP. Por defecto, está en C:/xampp/php/php.exe. Después de especificar la ubicación, haz clic en Siguiente.
+
 5.Se te solicitará la configuración de proxy. Deja la casilla sin marcar y omite esta parte presionando Siguiente. Luego, en la última ventana, haz clic en Instalar.
+
 6.Después de completar la instalación, abre el símbolo del sistema. Presiona CTRL + R, escribe «cmd» y haz clic en OK.
+
 7.Ingresa el siguiente comando: composer para verificar que la instalación fue correcta.
 
 ### Laravel: 
 Una vez instalado composer debemos realizar los siguientes pasos para la instalación de Laravel:
+
 1.Descargue el instalador de Laravel usando Composer con el siguiente comando en consola composer global requiere laravel/installer. 
+
 2.Asegúrese de colocar el directorio bin de proveedores de todo el sistema de Composer en $PATHsu sistema para que su sistema pueda ubicar el ejecutable de laravel. 
 
 Otra forma de instalar Laravel es creando un proyecto con composer:
+
 1.Alternativamente, también puede instalar Laravel emitiendo el create-projectcomando Composer en su terminal: composer create-project --prefer-dist laravel/laravel:^7.0 blog
+
 2.Si tiene PHP instalado localmente y le gustaría usar el servidor de desarrollo incorporado de PHP para servir su aplicación, puede usar
  el servecomando Artisan php artisan serve. Este comando iniciará un servidor de desarrollo en http://localhost:8000:
 
 ### SQL Server Management Studio SSMS
 1. Para descargar SSMS 19 Preview 3, visite Descargar SSMS 19 y descargamos el ejecutable Download SQL Server Management Studio (SSMS) 19 (Preview).
-2.Ejecutamos el instalador y escogemos una ruta de instalación.
+
+2. Ejecutamos el instalador y escogemos una ruta de instalación.
+
 3. Esperamos a que finalice las descarga y cerremos el instalador.
 
 ### La configuración del SQL Server Management Studio SSMS
 
 1.Para crear un nuevo usuario con derechos de administrador del sistema, realice los siguientes pasos:
+
 2.En el Explorador de objetos de SQL Server Management Studio, vaya a la carpeta Seguridad y expándala.
-3.Haga clic con el botón derecho en la carpeta Inicios de sesión y seleccione Nuevo inicio de sesión. Se abre el cuadro de diálogo Inicio de sesión - Nuevo.
+
+3.Haga clic con el botón derecho en la carpeta Inicios de sesión y seleccione Nuevo inicio de sesión. Se abre el cuadro de diálogo 
+Inicio de sesión - Nuevo.
+
 4.Seleccione la página General y luego ingrese un nombre de usuario en el cuadro de texto Nombre de inicio de sesión.
+
 5.Seleccione Autenticación de SQL Server e ingrese una contraseña.
+
 6.Seleccione la base de datos predeterminada de la lista Base de datos predeterminada.
+
 7.Seleccione la página Roles del servidor y luego marque la casilla de verificación sysadmin en la lista de Roles del servidor.
+
 8.Seleccione la página Asignación de usuarios.
+
 9.En la columna Mapa, marque la casilla de verificación de la base de datos a la que puede acceder el nuevo inicio de sesión. De forma predeterminada, el nombre de inicio de sesión aparece en la columna Usuario. Deje este valor.
+
 10.En la lista Membresía de rol de base de datos para, marque la casilla de verificación db_owner.
+
 11.Haga clic en Aceptar.
 
 Una vez echo el login de administrador debemos ejecutar SQL Server Configuration Manager
