@@ -13,7 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/','UserController@index');
-Route::post('/check', 'UserController@check')->name('login.check');
+Route::get('/', 'UserController@index');
+Route::post('/index', 'UserController@check')->name('login.check');
 Route::post('/login', 'UserController@logout')->name('user.logout');
 Route::get('/login', 'UserController@index')->name('user.login');
+Route::get('/index', 'UserController@refresh');
+Route::get('/tablaprofesores', 'TableController@mostrarprofesores');
+Route::get('/uct', 'NavbarController@cambiarUCT')->name('nav.uct');
+Route::get('/contacto', 'NavbarController@cambiarContacto')->name('nav.contacto');
+Route::get('/tablacarrera', 'TableController@mostrarcarreras');
+Route::get('/tabladepartamento', 'TableController@mostrardepartamentos');
+Route::get('/tablagasto', 'TableController@mostrargastos');
+Route::get('/tablaramo', 'TableController@mostrarramos');
+Route::get('/tablatipocarrera', 'TableController@mostrartipocarreras');
